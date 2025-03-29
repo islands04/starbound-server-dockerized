@@ -1,0 +1,10 @@
+sb/assets/
+sb/doc/
+sb/linux/
+sb/mods/
+sb/storage/
+sb/tiled/
+
+goggame-*.hashdb
+goggame-*.info
+

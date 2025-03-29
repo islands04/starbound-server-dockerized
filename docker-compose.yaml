@@ -1,0 +1,12 @@
+services:
+  starbound-server:
+    image: starbound-serve
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - /servers/starbound/server-data:/app/storage
+    ports:
+      - 21025:21025
+
+

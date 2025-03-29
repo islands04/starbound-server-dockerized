@@ -1,0 +1,13 @@
+version: "3.3"
+services:
+  starbound-server:
+    ports:
+      - 0.0.0.0:21025:21025/tcp
+    container_name: starbound-server
+    stdin_open: true
+    tty: true
+    image: starbound-server
+    restart: unless-stopped
+    volumes:
+      - /servers/starbound/data:/app/storage
+networks: {}

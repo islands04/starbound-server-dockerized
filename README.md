@@ -22,6 +22,20 @@ A starbound server which doesn't use Steam
 ### Connection refused!
 Check the ports. Even localhost needs open ports in router.
 
+### start.sh aborted!
+If you encounter this error in the logs:
+```
+starbound-server  | start.sh: line 7:     7 Aborted                 (core dumped) ./starbound_server $@
+```
+
+The start.sh file doesn't have execute permissions.  
+Ensure the start.sh file (and any other scripts in the linux/ dir) have execute permission BEFORE building the Docker image.
+
+```
+chmod 755 start.sh
+```
+
+
 ### Override thing?
 Check the box "allow assets mismatch" in your game's options
 

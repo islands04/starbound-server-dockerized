@@ -7,13 +7,16 @@ A starbound server which doesn't use Steam
 - Dockge
 
 ## Install
-- Go to your Starbound linux installation folder and copy everthing under **[install_dir]/game/** into the sb/ folder of this repo.
-- Edit the folders in there like a normal server. (edit config files, add mods, etc)
-- Launch `docker build -t starbound .` 
+1. Go to your Starbound linux installation folder and copy everthing under **[install_dir]/game/** into the sb/ folder of this repo.
+2. Execute: `docker build -t starbound .` to build the Docker image
 
 ## Run
-- Launch `docker run -d -p 21025:21025/tcp starbound`. (ports option is here if different port is needed. Just change the first one.)
-- Better yet, paste this run command into Dockge and click *Convert to Compose* then create a Stack from it.
+3a. Launch `docker run -d -p 21025:21025/tcp starbound`. (ports option is here if different port is needed. Just change the first one.)
+3b. Better yet, paste this run command into Dockge and click *Convert to Compose* then create a Stack from it.
+
+## Server Config
+4. Start the stack (Dockge) or container, then stop it after it has completed initialization
+5. Edit the starbound_server.config file in the mapped volume directory (directory mapped to /app/storage in the container)
 
 ## Troubleshotting
 ### Connection refused!

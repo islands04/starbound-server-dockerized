@@ -28,8 +28,10 @@ If you encounter this error in the logs:
 starbound-server  | start.sh: line 7:     7 Aborted                 (core dumped) ./starbound_server $@
 ```
 
-The start.sh file doesn't have execute permissions.  
+The start.sh file (or other executable) doesn't have execute permissions.  
 Ensure the start.sh file (and any other scripts in the linux/ dir) have execute permission BEFORE building the Docker image.
+Ensure the volume mount points have write permissions on them.
+
 
 ```
 chmod 755 start.sh
